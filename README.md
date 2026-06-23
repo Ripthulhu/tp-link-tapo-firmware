@@ -24,7 +24,7 @@ Generated on 2026-06-23.
 
 ## Notes
 
-The bucket root and `firmware/` prefix currently do not allow anonymous directory listing from this client. This repo is therefore a best-effort index of public object keys we could discover, not an official TP-Link catalog. Direct URLs use this form:
+Public downloads work when the exact object key is known, but anonymous directory listing is not currently exposed. The CloudFront download host returns an empty body for root/prefix/list-style requests, and direct S3 `ListBucket` requests return `AccessDenied`. This repo is therefore a best-effort index of public object keys we could discover, not an official TP-Link catalog. Direct URLs use this form:
 
 ```text
 https://download.tplinkcloud.com/<object-key>
